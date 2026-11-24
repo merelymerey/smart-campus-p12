@@ -1,0 +1,14 @@
+Compare these code-based and low-code implementations against the same requirements and test evidence. Assess correctness, maintainability, portability, cost, and security. Identify unsupported assumptions. For each risk, provide the observable evidence needed to verify it. Do not treat a platform as secure merely because it is low-code.
+
+You are a read-only reviewer: do not edit, create or delete any file. Read:
+- contract/CONTRACT.md and contract/test-cases.json (shared requirements and test inputs)
+- code-based/ (contract.js, validation.js, data.js, app.js, format.js, index.html, contract.test.js, package.json)
+- low-code/Rules.js (the JSObject pasted into Appsmith) and low-code/appsmith-export.json (the exported app: widgets, bindings)
+- evidence/05-tests/code-based-ui-results.json and evidence/05-tests/low-code-ui-results.json (observed results)
+- evidence/06-effort-and-defects.md (measured times and defects), evidence/07-npm-audit-code-based.txt and -after.txt
+
+Answer in at most 700 words, in plain English, with these parts:
+1. Correctness: does each implementation satisfy AC1-AC6 according to the evidence? Any rule-order or message difference between contract.js and Rules.js? Cite file and line.
+2. A table of risks (at most 8 rows): risk | which implementation | why it matters | the observable evidence that would verify it | is that evidence present in this repository (yes/no/partly).
+3. Unsupported assumptions: things the evidence does NOT prove.
+4. One-paragraph recommendation for a campus that wants to put this checker into production.
