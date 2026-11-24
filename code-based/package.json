@@ -1,12 +1,12 @@
 {
   "name": "smart-campus-availability",
-  "version": "0.7.0",
+  "version": "0.12.0",
   "private": true,
   "type": "module",
-  "description": "Smart Campus room availability prototype (Practice #06) with Vitest tests (Practice #07)",
+  "description": "Smart Campus room availability checker (Practice #12, code-based): static page implementing the shared contract, with Vitest tests",
   "scripts": {
     "test": "vitest run",
-    "serve": "node server.js",
+    "serve": "node serve.js",
     "lint": "eslint ."
   },
   "devDependencies": {
