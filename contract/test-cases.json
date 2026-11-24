@@ -1,0 +1,35 @@
+{
+  "room": "A204",
+  "bookings": [[600, 660]],
+  "messages": {
+    "INVALID_INPUT": "Enter whole minutes. Current time and start must be between 0 and 1439.",
+    "INVALID_DURATION": "Duration must be greater than zero.",
+    "OUT_OF_DAY": "The interval must end by 24:00 on the same day.",
+    "PAST_TIME": "Start must be after the supplied current time.",
+    "TOO_LONG": "Choose a duration of 120 minutes or less.",
+    "ROOM_BLOCKED": "This room is blocked and cannot be used.",
+    "OVERLAP": "This interval overlaps an existing booking.",
+    "AVAILABLE": "The room is available. No booking has been saved."
+  },
+  "decisions": {
+    "AVAILABLE": "Available",
+    "ROOM_BLOCKED": "Unavailable",
+    "OVERLAP": "Unavailable",
+    "INVALID_INPUT": "Invalid input",
+    "INVALID_DURATION": "Invalid input",
+    "OUT_OF_DAY": "Invalid input",
+    "PAST_TIME": "Invalid input",
+    "TOO_LONG": "Invalid input"
+  },
+  "cases": [
+    { "id": "T1", "title": "valid free interval", "now": 540, "start": 720, "duration": 60, "blocked": false, "available": true, "reasonCode": "AVAILABLE" },
+    { "id": "T2", "title": "overlap with an existing booking", "now": 540, "start": 630, "duration": 60, "blocked": false, "available": false, "reasonCode": "OVERLAP" },
+    { "id": "T3", "title": "blocked room", "now": 540, "start": 720, "duration": 60, "blocked": true, "available": false, "reasonCode": "ROOM_BLOCKED" },
+    { "id": "T4", "title": "duration = 0", "now": 540, "start": 720, "duration": 0, "blocked": false, "available": false, "reasonCode": "INVALID_DURATION" },
+    { "id": "T5", "title": "duration = 121 minutes", "now": 540, "start": 720, "duration": 121, "blocked": false, "available": false, "reasonCode": "TOO_LONG" },
+    { "id": "T6", "title": "past start time", "now": 540, "start": 500, "duration": 60, "blocked": false, "available": false, "reasonCode": "PAST_TIME" },
+    { "id": "T7a", "title": "adjacent: starts when the booking ends", "now": 540, "start": 660, "duration": 60, "blocked": false, "available": true, "reasonCode": "AVAILABLE" },
+    { "id": "T7b", "title": "adjacent: ends when the booking starts", "now": 540, "start": 570, "duration": 30, "blocked": false, "available": true, "reasonCode": "AVAILABLE" }
+  ],
+  "T8": "After T1-T7b the booking list must still deep-equal [[600, 660]] and the screen must still list exactly 10:00-11:00."
+}
