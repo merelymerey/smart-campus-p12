@@ -7,3 +7,8 @@
 2026-11-24 14:55:45 code-based: SCA repair start (npm audit: vitest/tinypool advisories)
 2026-11-24 14:56:08 code-based: SCA repair end
 2026-11-24 14:59:22 low-code: prep done (AI instructions, Rules.js parity edit); WAITING for student to sign in to Appsmith Cloud (wait time is not counted as effort)
+2026-11-24 15:04:53 low-code: student signed in; Appsmith setup begins
+2026-11-24 15:12:48 low-code: built + first deploy done (smoke check T1 OK in preview); testing on deployed app begins
+2026-11-24 15:13:06 low-code: DEFECT D1 found on deployed app: Start and Duration default values (720, 60) are empty after deploy; repair begins
+2026-11-24 15:19:25 low-code: D1 repaired + redeployed ~15:16; T1-T8 on deployed app done 8/8 (includes ~3 min lost to a browser-connection switch, not counted)
+2026-11-24 15:26:32 low-code: probes, selfTest, public sharing + anonymous/390 check, export done
