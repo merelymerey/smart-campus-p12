@@ -1,0 +1,15 @@
+# Baseline record — 2026-11-24 14:49:52
+source: /Users/admin/Downloads/SE-Practice-11/project
+git describe: final-p11
+HEAD: 95d64e0e7d8b7f04d560a0959ce42b3f1cc890a3
+status (empty = clean):
+package version: 0.7.0
+node: v25.6.1
+
+sha256 of rule/data files:
+16c497cb7c026ce866d473b563d319db24b0d8be603dd3a659e409e22e95e35e  validation.js
+4ee2e12074d63c37ddf0b102497346a7c426524c3777fafe47f20b16901c991a  rooms.js
+926d1d7ee2bdb0a6cf3e43feeff6fe1a8046ea76227a2cb6b73525476a130944  reason.js
+a93ec142e7dfdd8f4b07809cceec9c21ae966be8fb19fd9bc9e79be56a7b6003  app.js
+87a41dd6a31ecf60c12d334bf32db1f06c89d5dbf1b787b70e79468e27506c77  index.html
+2623aaa0b580a287370694463e770525a8f8dd52548ec5aaec6144680187537a  style.css

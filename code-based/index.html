@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Smart Campus | Room availability</title><link rel="stylesheet" href="style.css"></head>
+<body><header>SMART CAMPUS / STUDENT SPACES</header><main>
+<div class="kicker">Room availability · classroom demo</div><h1>Find a time to study.</h1><p class="intro">Choose a room and check a time on the same day. A check shows availability only; it does not reserve a room.</p>
+<div class="grid"><section class="panel" aria-labelledby="room-heading"><h2 id="room-heading">Selected room</h2>
+<label for="room">Room</label><select id="room"><option value="A204">A204 · Study room</option><option value="B101">B101 · Seminar room (blocked)</option></select>
+<div class="room-number" id="room-number">A204</div><p id="room-state" class="meta">Open for availability checks</p>
+<h3>Existing bookings</h3><ul id="bookings" class="bookings"></ul><p class="meta">Fictional data · no bookings are changed.</p></section>
+<section class="panel" aria-labelledby="check-heading"><h2 id="check-heading">Check your time</h2><p class="meta">Enter whole minutes after midnight (600 = 10:00). Maximum length: 120 minutes.</p>
+<form id="check-form" novalidate><label for="now">Supplied current time (minutes)</label><input id="now" aria-describedby="now-clock" type="number" min="0" max="1439" step="1" value="540" required><span class="hint" id="now-clock"></span>
+<div class="time-fields"><div><label for="start">Start (minutes)</label><input id="start" aria-describedby="start-clock" type="number" min="0" max="1439" step="1" value="660" required><span class="hint" id="start-clock"></span></div><div><label for="end">End (minutes)</label><input id="end" aria-describedby="end-clock" type="number" min="1" max="1440" step="1" value="720" required><span class="hint" id="end-clock"></span></div></div>
+<button type="submit">Check availability</button></form>
+<div id="result" role="status" aria-live="polite" aria-atomic="true"><strong id="decision">Ready to check</strong><p id="feedback">Choose an interval and check its availability.</p></div>
+<button type="button" id="explain-button" class="secondary" disabled>Explain availability</button>
+<aside id="explanation" class="explanation" aria-labelledby="explanation-label" aria-live="polite" hidden><p id="explanation-label" class="explanation-label">AI-generated explanation – not a booking status</p><p id="explanation-text"></p><p id="explanation-source" class="meta"></p></aside></section></div>
+<footer>Times use one date. An interval includes its start and excludes its end. Touching bookings are allowed.</footer>
+</main><script type="module" src="app.js"></script></body></html>

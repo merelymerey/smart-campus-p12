@@ -1,0 +1,17 @@
+
+> smart-campus-availability@0.7.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /Users/admin/Downloads/SE-Practice-11/project
+
+ ✓ booking.test.js (23 tests) 4ms
+ ✓ review-fixes.test.js (9 tests) 3ms
+ ✓ explain.test.js (63 tests) 11ms
+ ✓ server.test.js (21 tests) 42ms
+
+ Test Files  4 passed (4)
+      Tests  116 passed (116)
+   Start at  14:49:53
+   Duration  355ms (transform 75ms, setup 0ms, collect 141ms, tests 60ms, environment 1ms, prepare 241ms)
+
